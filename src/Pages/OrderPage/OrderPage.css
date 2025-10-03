@@ -1,0 +1,28 @@
+.admin-orders-container {
+  padding: 20px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.confirm-btn {
+  padding: 5px 10px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.confirm-btn:hover {
+  background-color: #059669;
+}

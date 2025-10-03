@@ -1,0 +1,148 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
+
+:root {
+  /* Color Palette */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+
+  /* Transitions */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 15px;
+  background: var(--sidebar-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-03);
+  z-index: 100;
+}
+
+/* sidebar Header */
+.sidebar .logo img {
+  max-width: 70px;
+  height: auto;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.sidebar header {
+  position: relative;
+}
+
+/* Sidebar Toggle */
+.sidebar header .toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--sidebar-color);
+  cursor: pointer;
+  transition: var(--tran-03);
+}
+
+.sidebar.collapsed header .toggle-btn {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.sidebar.collapsed {
+  width: 90px;
+  transition: var(--tran-03);
+}
+
+.sidebar.collapsed .text {
+  opacity: 0;
+}
+
+.sidebar.collapsed .menu-links li a {
+  justify-content: center;
+}
+
+.sidebar.collapsed .toggle-btn {
+  transform: rotate(180deg);
+}
+
+.menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.menu-links i {
+  font-size: 20px;
+}
+
+.menu-links li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  color: #444;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.menu-links li a:hover {
+  background: #f0f0f0;
+}
+
+.menu-links li a.active {
+  background: #4caf50;
+  color: #fff;
+}
+
+.bottom-content {
+  position: absolute;
+  bottom: 10px;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  color: #444;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.bottom-content a {
+  text-decoration: none;
+}
+
+.bottom-content span {
+  padding-left: 10px;
+}
